@@ -7,7 +7,7 @@ struct Pet: Codable {
 	var lastDrink: Date
 	
 	var happinessLevel: String {
-		if hunger == "Hungry" || thirst == "Thirsty" {
+		if hunger == "Hungry" || hunger == "Esfomiado" || thirst == "Thirsty" || thirst == "Com sede" {
 			return NSLocalizedString("Unhappy", comment: "")
 		} else {
 			return NSLocalizedString("Happy", comment: "")
