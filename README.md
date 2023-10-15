@@ -1,7 +1,5 @@
 # Virtual-Pet
 
-Using in my App.
-
-**Credits:** 
+**Pet Art Credits:** 
 
 Heamomo (https://heamomo.itch.io/white-dog)
