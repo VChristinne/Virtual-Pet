@@ -1,6 +1,6 @@
 # Virtual-Pet
 
-Using in my App via url.
+Using in my App.
 
 **Credits:** 
 
