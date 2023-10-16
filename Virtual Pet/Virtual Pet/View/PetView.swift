@@ -3,7 +3,7 @@ import FLAnimatedImage
 
 struct PetView: View {
 	@State var isActive = true
-	@StateObject private var vm = ViewModel()
+	@StateObject private var vm = PetViewModel()
 	private let timer = Timer.publish(every: 15, on: .main, in: .common).autoconnect()
 	
 	var body: some View {
@@ -20,18 +20,7 @@ struct PetView: View {
 			
 			VStack {
 				
-				HStack {
-					ForEach(0..<3, id: \.self) { _ in
-						Image(systemName: "heart.fill")
-							.resizable()
-							.scaledToFit()
-							.foregroundStyle(vm.pet.happinessLevel == "Happy" || vm.pet.happinessLevel == "Feliz" ? .white : .gray)
-							//.symbolEffect(.pulse)
-							.frame(width: 45)
-							.padding(.top, -120)
-					}
-				}
-				
+				HeartView()
 				
 				if (vm.pet.happinessLevel == "Happy" || vm.pet.happinessLevel == "Feliz") {
 					if let url = URL(string: "https://github.com/VChristinne/Virtual-Pet/raw/main/Pet/happy-pet.gif") {
@@ -63,45 +52,9 @@ struct PetView: View {
 					}
 				}
 				
-				/*
-				// MARK: STATUS
-				VStack {
-					Text("Age: **\(vm.pet.ageDescription)**")
-					Text("Status: **\(vm.pet.happinessLevel)**")
-					Text("Hunger: **\(vm.pet.hunger)**")
-					Text("Thirst: **\(vm.pet.thirst)**")
-				}
-				*/
+				// StatusPetView()
 				
-				// MARK: ACTIONS
-				HStack(spacing: 20) {
-					Button(action: vm.feed) {
-						Image(systemName: "fish.fill")
-							.resizable()
-							.scaledToFit()
-							.frame(width: 50, height: 50)
-							.padding(10)
-							.background(Color.white)
-							.clipShape(Circle())
-							.overlay(Circle().stroke(Color.black, lineWidth: 1))
-					}
-					
-					Button(action: vm.giveWater) {
-						Image(systemName: "waterbottle.fill")
-							.resizable()
-							.scaledToFit()
-							.frame(width: 50, height: 50)
-							.padding(10)
-							.background(Color.white)
-							.clipShape(Circle())
-							.overlay(Circle().stroke(Color.black, lineWidth: 1))
-					}
-				}
-				.tint(.blue)
-				.padding(10)
-				.background(.thinMaterial)
-				.clipShape(Capsule())
-				.padding(.top, 180)
+				ActionsView()
 
 			}
 		}

@@ -51,6 +51,7 @@
       }
     },
     "Age: **%@**" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -152,6 +153,7 @@
       }
     },
     "Hunger: **%@**" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -253,6 +255,7 @@
       }
     },
     "Status: **%@**" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -269,6 +272,7 @@
       }
     },
     "Thirst: **%@**" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
