@@ -4,7 +4,7 @@ import SwiftUI
 struct Virtual_PetApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PetView()
         }
     }
 }

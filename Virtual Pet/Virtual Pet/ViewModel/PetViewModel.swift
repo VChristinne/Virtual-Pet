@@ -25,4 +25,9 @@ class PetViewModel: ObservableObject {
 		pet.lastDrink = Date()
 		saveData()
 	}
+	
+	func giveMedicine() {
+		pet.lastMedicine = Date()
+		saveData()
+	}
 }

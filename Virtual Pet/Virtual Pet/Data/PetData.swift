@@ -13,7 +13,7 @@ class PetData {
 				return
 			}
 		}
-		self.pet = Pet(name: "Lola", lastMeal: Date(), lastDrink: Date())
+		self.pet = Pet(name: "Lola", lastMeal: Date(), lastDrink: Date(), lastMedicine: Date())
 	}
 	
 	func loadData() -> Pet {

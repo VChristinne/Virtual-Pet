@@ -51,7 +51,6 @@
       }
     },
     "Age: **%@**" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -100,6 +99,9 @@
           }
         }
       }
+    },
+    "Getting sick..." : {
+
     },
     "Getting thirsty..." : {
       "extractionState" : "manual",
@@ -152,8 +154,13 @@
         }
       }
     },
+    "Health: **%@**" : {
+
+    },
+    "Healthy" : {
+
+    },
     "Hunger: **%@**" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -254,8 +261,10 @@
         }
       }
     },
+    "Sick" : {
+
+    },
     "Status: **%@**" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -272,7 +281,6 @@
       }
     },
     "Thirst: **%@**" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

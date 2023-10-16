@@ -5,6 +5,7 @@ struct Pet: Codable {
 	var birthday = Date()
 	var lastMeal: Date
 	var lastDrink: Date
+	var lastMedicine: Date
 	
 	var happinessLevel: String {
 		if hunger == "Hungry" || hunger == "Esfomiado" || thirst == "Thirsty" || thirst == "Com sede" {
@@ -48,6 +49,20 @@ struct Pet: Codable {
 			case 0..<30: string = NSLocalizedString("Satiated", comment: "")
 			case 30..<60: string = NSLocalizedString("Getting thirsty...", comment: "")
 			case 60...: string = NSLocalizedString("Thirsty", comment: "")
+			default: string = NSLocalizedString("Idk", comment: "")
+		}
+		
+		return string
+	}
+	
+	var sick: String {
+		let timeSince = calcTimeSince(date: lastMedicine)
+		var string = ""
+		
+		switch timeSince {
+			case 0..<60: string = NSLocalizedString("Healthy", comment: "")
+			case 60..<120: string = NSLocalizedString("Getting sick...", comment: "")
+			case 120...: string = NSLocalizedString("Sick", comment: "")
 			default: string = NSLocalizedString("Idk", comment: "")
 		}
 		
